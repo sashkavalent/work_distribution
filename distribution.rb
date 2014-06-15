@@ -8,7 +8,7 @@ class Float
   end
 end
 
-devices_work_distributor = DevicesWorkDistributor.new('list.xlsx')
+devices_work_distributor = DevicesWorkDistributor.new(ARGV[0])
 devices_work_distributor.calculate_work_distribution!
 devices_work_distributor.export
 devices_work_distributor.inspect
