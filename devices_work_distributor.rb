@@ -22,12 +22,12 @@ class DevicesWorkDistributor
 
   def calculate_work_distribution!
     @devices.each do |device|
-      @work_shedule.add_work!(best_start_month(device), device.service_period, device.work_amount)
+      @work_shedule.add_work!(best_start_month(device), device)
     end
   end
 
   def export
-    @devices_xlsx_driver.export_to_file(@work_shedule.export, 'export.xlsx')
+    @devices_xlsx_driver.export_to_file(@work_shedule.serialize, 'export.xlsx')
   end
 
   private
@@ -38,7 +38,7 @@ class DevicesWorkDistributor
 
     device.service_period.times do |month_number|
       temp_work_shedule = @work_shedule.clone
-      temp_work_shedule.add_work!(month_number, device.service_period, device.work_amount)
+      temp_work_shedule.add_work!(month_number, device)
       current_delta = temp_work_shedule.sum_delta
       if current_delta < delta
         delta = current_delta

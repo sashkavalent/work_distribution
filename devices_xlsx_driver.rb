@@ -37,8 +37,15 @@ class DevicesXLSXDriver
     devices
   end
 
-  def export_to_file(work_for_months, file_name)
-    @worksheet[@table_start_line + 1][START_MONTH_COLUMN_NUMBER].change_contents('hello')
+  def export_to_file(serialized_work_shedule, file_name)
+    work_for_months = serialized_work_shedule[:work_for_months]
+    devices_works = serialized_work_shedule[:devices_works]
+
+    devices_works.each do |device, months_numbers|
+      months_numbers.each do |number|
+        @worksheet[find_line_by_text(device.id)][START_MONTH_COLUMN_NUMBER + number].change_contents(device.work_amount)
+      end
+    end
 
     last_column_number = START_MONTH_COLUMN_NUMBER + @months_count
     (START_MONTH_COLUMN_NUMBER..last_column_number).each_with_index do |column_index, month_index|

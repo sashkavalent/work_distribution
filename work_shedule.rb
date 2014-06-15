@@ -4,6 +4,7 @@ class WorkShedule
 
   def initialize(months_count: months_count, work_for_months: work_for_months)
     @work_for_months = work_for_months || Array.new(months_count) { 0 }
+    @devices_works = {}
   end
 
   def inspect
@@ -19,12 +20,17 @@ class WorkShedule
     @work_for_months.reduce(:+)
   end
 
-  def add_work!(start_month, period, work_amount)
+  def add_work!(start_month, device)
+    months_numbers = []
     month_number = start_month
+
     while month_number < @work_for_months.count
-      @work_for_months[month_number] += work_amount
-      month_number += period
+      months_numbers << month_number
+      @work_for_months[month_number] += device.work_amount
+      month_number += device.service_period
     end
+
+    @devices_works[device] = months_numbers
   end
 
   def sum_delta
@@ -40,8 +46,8 @@ class WorkShedule
     WorkShedule.new(work_for_months: @work_for_months.clone)
   end
 
-  def export
-    @work_for_months
+  def serialize
+    { work_for_months: @work_for_months, devices_works: @devices_works }
   end
 
 end
