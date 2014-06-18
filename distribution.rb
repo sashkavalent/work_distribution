@@ -8,7 +8,11 @@ class Float
   end
 end
 
-devices_work_distributor = DevicesWorkDistributor.new(ARGV[0])
-devices_work_distributor.calculate_work_distribution!
-devices_work_distributor.export
-devices_work_distributor.inspect
+ARGV[1].to_i.times do |i|
+  devices_work_distributor = DevicesWorkDistributor.new(ARGV[0], i)
+  devices_work_distributor.calculate_work_distribution!
+  devices_work_distributor.export
+  puts '________________________'
+  p i
+  devices_work_distributor.inspect
+end
