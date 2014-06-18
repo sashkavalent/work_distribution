@@ -10,7 +10,7 @@ class DevicesWorkDistributor
     devices = @devices_xlsx_driver.import
     @devices = devices.sort_by!(&:work_amount).reverse!
 
-    @work_shedule = WorkShedule.new(months_count: @devices_xlsx_driver.months_count)
+    @work_shedule = WorkShedule.new(@devices_xlsx_driver.months_count, nil)
   end
 
   def inspect
