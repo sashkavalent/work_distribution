@@ -10,9 +10,8 @@ class DevicesWorkDistributor
     @devices_xlsx_driver = YAML.load(File.read('devices_xlsx_driver.yml'))
     # @devices_xlsx_driver = DevicesXLSXDriver.new(xlsx_path)
     devices = @devices_xlsx_driver.import
-    File.write('devices.yml', devices.to_yaml)
-    File.write('devices_xlsx_driver.yml', @devices_xlsx_driver.to_yaml)
-    @devices_xlsx_driver = YAML.load(File.read('devices_xlsx_driver.yml'))
+    # File.write('devices.yml', devices.to_yaml)
+    # File.write('devices_xlsx_driver.yml', @devices_xlsx_driver.to_yaml)
     @devices = devices.sort_by!(&:work_amount).reverse!
 
     @work_shedule = WorkShedule.new(@devices_xlsx_driver.months_count, nil)

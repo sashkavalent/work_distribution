@@ -1,0 +1,241 @@
+---
+- !ruby/struct:Device
+  id: '01310016'
+  name: Электроскворода СЭСМ 745*866*910* мм. 0.2 ч чугунная чаша, шт
+  service_count: 4
+  work_amount: 7
+- !ruby/struct:Device
+  id: '01310017'
+  name: Электроскворода СЭСМ 745*866*910 мм 0.2 ч чугунная чаша, шт
+  service_count: 10
+  work_amount: 5
+- !ruby/struct:Device
+  id: 01320318
+  name: Машина протирочная МПР-350М-02 600* 300650 протирочно-резочная, шт
+  service_count: 3
+  work_amount: 10
+- !ruby/struct:Device
+  id: 01320319
+  name: Шкаф жарочный 850*900*1625 ШЖЭ-00, шт
+  service_count: 8
+  work_amount: 2
+- !ruby/struct:Device
+  id: '01320321'
+  name: Машина картофелеочистительная МОК 300м, шт
+  service_count: 12
+  work_amount: 3
+- !ruby/struct:Device
+  id: '01320322'
+  name: Машина протирочно-резательная МПР-350м, шт
+  service_count: 7
+  work_amount: 9
+- !ruby/struct:Device
+  id: '01320326'
+  name: Печь пароконвекционная ППК-5 в комплекте с гастроемкостями, шт
+  service_count: 8
+  work_amount: 6
+- !ruby/struct:Device
+  id: 01380243
+  name: Электроплита ПЭСМ-6 1400*800*850, шт
+  service_count: 4
+  work_amount: 25
+- !ruby/struct:Device
+  id: 01380244
+  name: Котел пищеварочный эл. секц. КПЭС 60, шт
+  service_count: 5
+  work_amount: 30
+- !ruby/struct:Device
+  id: 01380245
+  name: Шкаф холодильный 800*755*2100 "Днепр 80" ШС, шт
+  service_count: 6
+  work_amount: 15
+- !ruby/struct:Device
+  id: 01380246
+  name: Шкаф холодильный 800*755*2100 "Днепр 80" ШС, шт
+  service_count: 5
+  work_amount: 10
+- !ruby/struct:Device
+  id: 01380247
+  name: Шкаф холодильный 800*755*2100 "Днепр -80" ШС, шт
+  service_count: 4
+  work_amount: 4
+- !ruby/struct:Device
+  id: 01380248
+  name: Шкаф холодильный 800*755*2100 "Днепр 80" ШС, шт
+  service_count: 10
+  work_amount: 6
+- !ruby/struct:Device
+  id: 01380249
+  name: Шкаф холодильный 1600*755*2100 "Днепр 160" ШС, шт
+  service_count: 5
+  work_amount: 6
+- !ruby/struct:Device
+  id: 01380250
+  name: Машина тестомесильная 625*340*610 МТ-12, шт
+  service_count: 3
+  work_amount: 4
+- !ruby/struct:Device
+  id: 01380251
+  name: Мясорубка МИМ-350, шт
+  service_count: 8
+  work_amount: 8
+- !ruby/struct:Device
+  id: 01380252
+  name: Котел пищеварочный КПЭМ-100, шт
+  service_count: 2
+  work_amount: 40
+- !ruby/struct:Device
+  id: 01380253
+  name: Котел пищеварочный КПЭМ-160, шт
+  service_count: 1
+  work_amount: 20
+- !ruby/struct:Device
+  id: 01380254
+  name: Ларь морозильный ELCOLD EL45, шт
+  service_count: 5
+  work_amount: 24
+- !ruby/struct:Device
+  id: 01380255
+  name: Ларь морозильный ELCOLD EL45, шт
+  service_count: 9
+  work_amount: 11
+- !ruby/struct:Device
+  id: 01380256
+  name: Ларь морозильный ELCOLD EL45, шт
+  service_count: 8
+  work_amount: 24
+- !ruby/struct:Device
+  id: 01380257
+  name: Блинный аппарат " БА-2/5" (Масленица), шт
+  service_count: 7
+  work_amount: 4
+- !ruby/struct:Device
+  id: '01320323'
+  name: Каток гладильный ЛГ-16, шт
+  service_count: 6
+  work_amount: 5
+- !ruby/struct:Device
+  id: '01320324'
+  name: Центрифуга, шт
+  service_count: 5
+  work_amount: 8
+- !ruby/struct:Device
+  id: '01320325'
+  name: Центрифуга, шт
+  service_count: 4
+  work_amount: 4
+- !ruby/struct:Device
+  id: 01380259
+  name: Машина стиральная отжимная В10-322, HIT
+  service_count: 3
+  work_amount: 5
+- !ruby/struct:Device
+  id: О1380260
+  name: Машина стиральная Л60-222, шт
+  service_count: 2
+  work_amount: 6
+- !ruby/struct:Device
+  id: 01380261
+  name: Машина стиральная ЛЗО-222, шт
+  service_count: 1
+  work_amount: 40
+- !ruby/struct:Device
+  id: 01320029
+  name: Шкаф жарочный ЭШ-ЗМ, шт
+  service_count: 12
+  work_amount: 4
+- !ruby/struct:Device
+  id: '01320105'
+  name: Каток сушильный КГ 1628-11, шт
+  service_count: 11
+  work_amount: 8
+- !ruby/struct:Device
+  id: 01320139
+  name: Эл. колорифер, шт
+  service_count: 10
+  work_amount: 4
+- !ruby/struct:Device
+  id: 01380045
+  name: Швейная машина, шт
+  service_count: 9
+  work_amount: 5
+- !ruby/struct:Device
+  id: 01380056
+  name: Холодильник Минск-16"Е", шт
+  service_count: 8
+  work_amount: 6
+- !ruby/struct:Device
+  id: 01380057
+  name: Холодильник Минск 16Е, шт
+  service_count: 7
+  work_amount: 7
+- !ruby/struct:Device
+  id: 01380058
+  name: Холодильник Минск 16Е, шт
+  service_count: 6
+  work_amount: 8
+- !ruby/struct:Device
+  id: О1380114
+  name: Машина тестомесильная ТММ, шт
+  service_count: 5
+  work_amount: 9
+- !ruby/struct:Device
+  id: 01380145
+  name: Швейная машина -1022 кл, шт
+  service_count: 4
+  work_amount: 10
+- !ruby/struct:Device
+  id: 01380204
+  name: Шкаф жарочный, шт
+  service_count: 4
+  work_amount: 11
+- !ruby/struct:Device
+  id: 01380205
+  name: Швейная машина "АЛЕСЯ", шт
+  service_count: 3
+  work_amount: 12
+- !ruby/struct:Device
+  id: 01380206
+  name: Швейная машина МБК, шт
+  service_count: 2
+  work_amount: 23
+- !ruby/struct:Device
+  id: 01380217
+  name: Машина посудомоечная ММУ-1000, шт
+  service_count: 10
+  work_amount: 2
+- !ruby/struct:Device
+  id: 01380224
+  name: Холодильник "Атлант", шт
+  service_count: 9
+  work_amount: 3
+- !ruby/struct:Device
+  id: 01380225
+  name: Холодильник "Атлант", шт
+  service_count: 8
+  work_amount: 4
+- !ruby/struct:Device
+  id: 01380226
+  name: Холодильник "Атлант", шт
+  service_count: 7
+  work_amount: 5
+- !ruby/struct:Device
+  id: 01380227
+  name: Холодильник "Атлант", шт
+  service_count: 6
+  work_amount: 6
+- !ruby/struct:Device
+  id: 01380230
+  name: Машина стиральная Л-50-221 люкс, шт
+  service_count: 5
+  work_amount: 7
+- !ruby/struct:Device
+  id: 01380270
+  name: Шкаф холодильный СМ 107, шт
+  service_count: 4
+  work_amount: 8
+- !ruby/struct:Device
+  id: 01380271
+  name: Шкаф холодильный СМ 110, шт
+  service_count: 5
+  work_amount: 24
