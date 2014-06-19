@@ -9,10 +9,10 @@ class DevicesWorkDistributor
     @deep_level = deep_level
     @devices_xlsx_driver = YAML.load(File.read('devices_xlsx_driver.yml'))
     # @devices_xlsx_driver = DevicesXLSXDriver.new(xlsx_path)
-    devices = @devices_xlsx_driver.import
+    @devices = @devices_xlsx_driver.import
     # File.write('devices.yml', devices.to_yaml)
     # File.write('devices_xlsx_driver.yml', @devices_xlsx_driver.to_yaml)
-    @devices = devices.sort_by!(&:work_amount).reverse!
+    @devices = Device.sort_devices(@devices).reverse!
 
     @work_shedule = WorkShedule.new(@devices_xlsx_driver.months_count, nil)
   end
@@ -24,7 +24,7 @@ class DevicesWorkDistributor
     puts 'total_amount_of_work = ' + @work_shedule.sum.to_s
     puts 'sum_delta = ' + @work_shedule.sum_delta.to_s
     puts 'sum_delta / total_amount_of_work = ' + (@work_shedule.sum_delta / @work_shedule.sum.to_f * 100).round(2).to_s + '%'
-    @work_shedule.inspect
+    # @work_shedule.inspect
   end
 
   def calculate_work_distribution!
