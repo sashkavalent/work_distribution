@@ -1,12 +1,14 @@
 require_relative 'work_shedule'
 require_relative 'device'
 require_relative 'devices_xlsx_driver'
+require 'yaml'
 
 class DevicesWorkDistributor
 
   def initialize(xlsx_path, deep_level)
     @deep_level = deep_level
-    @devices_xlsx_driver = DevicesXLSXDriver.new(xlsx_path)
+    @devices_xlsx_driver = YAML.load(File.read('devices_xlsx_driver.yml'))
+    # @devices_xlsx_driver = DevicesXLSXDriver.new(xlsx_path)
     devices = @devices_xlsx_driver.import
     @devices = devices.sort_by!(&:work_amount).reverse!
 
@@ -29,7 +31,7 @@ class DevicesWorkDistributor
   end
 
   def export
-    @devices_xlsx_driver.export_to_file(@work_shedule.serialize, 'export.xlsx')
+    # @devices_xlsx_driver.export_to_file(@work_shedule.serialize, 'export.xlsx')
   end
 
   private
