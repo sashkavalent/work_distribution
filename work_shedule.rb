@@ -2,7 +2,7 @@ require 'rubyXL'
 
 class WorkShedule
 
-  def initialize(months_count: months_count, work_for_months: work_for_months)
+  def initialize(months_count, work_for_months)
     @work_for_months = work_for_months || Array.new(months_count) { 0 }
     @devices_works = {}
   end
@@ -43,7 +43,7 @@ class WorkShedule
   end
 
   def clone
-    WorkShedule.new(work_for_months: @work_for_months.clone)
+    WorkShedule.new(nil, @work_for_months.clone)
   end
 
   def serialize

@@ -7,21 +7,22 @@ class DevicesWorkDistributor
 
   def initialize(xlsx_path, deep_level)
     @deep_level = deep_level
-    @devices_xlsx_driver = DevicesXLSXDriver.new(xlsx_path)
+    @devices_xlsx_driver = YAML.load(File.read('devices_xlsx_driver.yml'))
+    # @devices_xlsx_driver = DevicesXLSXDriver.new(xlsx_path)
     devices = @devices_xlsx_driver.import
     File.write('devices.yml', devices.to_yaml)
     File.write('devices_xlsx_driver.yml', @devices_xlsx_driver.to_yaml)
     @devices_xlsx_driver = YAML.load(File.read('devices_xlsx_driver.yml'))
     @devices = devices.sort_by!(&:work_amount).reverse!
 
-    @work_shedule = WorkShedule.new(months_count: @devices_xlsx_driver.months_count)
+    @work_shedule = WorkShedule.new(@devices_xlsx_driver.months_count, nil)
   end
 
   def inspect
     puts 'average = ' + @work_shedule.average.to_s
     puts 'total_amount_of_work = ' + @work_shedule.sum.to_s
     puts 'sum_delta = ' + @work_shedule.sum_delta.to_s
-    puts 'sum_delta / total_amount_of_work = ' + (@work_shedule.sum_delta / @work_shedule.sum.to_f * 100).to_s + '%'
+    # puts 'sum_delta / total_amount_of_work = ' + (@work_shedule.sum_delta / @work_shedule.sum.to_f * 100).to_s + '%'
     @work_shedule.inspect
   end
 
@@ -33,7 +34,7 @@ class DevicesWorkDistributor
   end
 
   def export
-    @devices_xlsx_driver.export_to_file(@work_shedule.serialize, 'export.xlsx')
+    # @devices_xlsx_driver.export_to_file(@work_shedule.serialize, 'export.xlsx')
   end
 
   private

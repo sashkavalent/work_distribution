@@ -1,5 +1,6 @@
 require 'pry'
 require 'date'
+require 'ostruct'
 require_relative 'devices_work_distributor'
 
 class Float
