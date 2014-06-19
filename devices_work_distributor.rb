@@ -18,10 +18,12 @@ class DevicesWorkDistributor
   end
 
   def inspect
+    puts '________________________'
+    p @deep_level
     puts 'average = ' + @work_shedule.average.to_s
     puts 'total_amount_of_work = ' + @work_shedule.sum.to_s
     puts 'sum_delta = ' + @work_shedule.sum_delta.to_s
-    # puts 'sum_delta / total_amount_of_work = ' + (@work_shedule.sum_delta / @work_shedule.sum.to_f * 100).to_s + '%'
+    puts 'sum_delta / total_amount_of_work = ' + (@work_shedule.sum_delta / @work_shedule.sum.to_f * 100).round(2).to_s + '%'
     @work_shedule.inspect
   end
 
