@@ -1,6 +1,7 @@
 require_relative 'work_shedule'
 require_relative 'device'
 require_relative 'devices_xlsx_driver'
+require 'yaml'
 
 class DevicesWorkDistributor
 
@@ -8,6 +9,9 @@ class DevicesWorkDistributor
     @deep_level = deep_level
     @devices_xlsx_driver = DevicesXLSXDriver.new(xlsx_path)
     devices = @devices_xlsx_driver.import
+    File.write('devices.yml', devices.to_yaml)
+    File.write('devices_xlsx_driver.yml', @devices_xlsx_driver.to_yaml)
+    @devices_xlsx_driver = YAML.load(File.read('devices_xlsx_driver.yml'))
     @devices = devices.sort_by!(&:work_amount).reverse!
 
     @work_shedule = WorkShedule.new(months_count: @devices_xlsx_driver.months_count)

@@ -2,10 +2,10 @@ require 'rubyXL'
 
 class DevicesXLSXDriver
 
-  DEVICE_COLUMN_NAMES = OpenStruct.new(id: "Инвентарный номер",
-    name: "Наименование", service_count: "Число ТО за год",
-    work_amount: "Норма трудоемкости, чел.*час.")
-  END_OF_TABLE_LABEL = 'ИТОГО:'
+  DEVICE_COLUMN_NAMES = OpenStruct.new(id: "Number",
+    name: "Name", service_count: "Number per year",
+    work_amount: "Work amount")
+  END_OF_TABLE_LABEL = 'RESULT:'
   START_MONTH_COLUMN_NUMBER = 5
 
   attr_reader :months_count
