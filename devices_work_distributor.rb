@@ -12,7 +12,7 @@ class DevicesWorkDistributor
     @devices = @devices_xlsx_driver.import
     # File.write('devices.yml', devices.to_yaml)
     # File.write('devices_xlsx_driver.yml', @devices_xlsx_driver.to_yaml)
-    @devices = Device.sort_devices(@devices).reverse!
+    @devices = @devices.sort.reverse
 
     @work_shedule = WorkShedule.new(@devices_xlsx_driver.months_count, nil)
   end
