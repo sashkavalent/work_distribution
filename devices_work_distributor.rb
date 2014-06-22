@@ -7,8 +7,8 @@ class DevicesWorkDistributor
 
   def initialize(xlsx_path, deep_level)
     @deep_level = deep_level
-    @devices_xlsx_driver = YAML.load(File.read('devices_xlsx_driver.yml'))
-    # @devices_xlsx_driver = DevicesXLSXDriver.new(xlsx_path)
+    # @devices_xlsx_driver = YAML.load(File.read('devices_xlsx_driver.yml'))
+    @devices_xlsx_driver = DevicesXLSXDriver.new(xlsx_path)
     @devices = @devices_xlsx_driver.import
     # File.write('devices.yml', devices.to_yaml)
     # File.write('devices_xlsx_driver.yml', @devices_xlsx_driver.to_yaml)
