@@ -2,6 +2,7 @@ require_relative 'work_shedule'
 require_relative 'device'
 require_relative 'devices_xlsx_driver'
 require 'yaml'
+require 'ostruct'
 
 class DevicesWorkDistributor
 

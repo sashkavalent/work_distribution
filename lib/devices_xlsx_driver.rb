@@ -1,4 +1,5 @@
 require 'rubyXL'
+require 'ostruct'
 
 class DevicesXLSXDriver
 
